@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<script type="text/javascript">
+	<!-- Hide from browser
+	function display(form)
+	{
+		doc=open("","output");
+		doc=document.write('<body style="background-color:'+form.bg.value+';color:'+form.fg.value+"");
+		doc.document.write("Link="+form.link.value+"Alink="+form.alink.value);
+		doc.document.write("vlink="+form.vlink.value+">");
+		doc.document.write("<h1>this is a test </h1> u have selected these colours</body>");
+		doc.document.close();
+
+	}
+</script>
+<body>
+<center>
+	<script type="text/javascript">
+		document.write("<h1>the color picker</h1><form method='post'>");
+		document.write('enter colors:<br>');
+		document.write('Background:<input name="bg" type="text" value="+document.bg.color+"/><br>');
+		document.write('Text:<input name="fg" type="text" value="+document.fg.color+"/><br>');
+		document.write('Link:<input name="link" type="text" value="+document.link.color+"/><br>');
+		document.write('Active Link:<input name="alink" type="text" value="+document.alink.color+"/><br>');
+		document.write('Followed Link:<input name="vlink" type="text" value="+document.vlink.color+"/><br>');
+		document.write('<input onClick="display(this.form);" type="button" value="test"/>');
+		document.write('</form>');
+		display(document.forms[0]);
+// stop -->
+	</script>
+</center>
+</body>
+</html>

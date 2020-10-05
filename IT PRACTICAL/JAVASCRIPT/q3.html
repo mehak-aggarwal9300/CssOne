@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+  <script type="text/javascript">
+
+      var f = ["One", "Ten", "Five", "Nine"];
+      var e = f.join("+");
+      document.write("F is " + f);
+      document.write("<br>e is " + e);
+      f.splice(2, 0, "New", "New2");
+      document.write("<br> New F after splicing is " + f);
+      var x = f.toString();
+      document.write("<br>F tostring is " + x);
+      f.sort();
+      document.write("<br>F after sorting is " + f);
+
+
+  </script>
+
+</body>
+
+</html>
+
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+        <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var arr= new Array(["One","Two","Three","Four"]);
+      document.write("Joining array "+ arr.join(".") +"<br>");
+      document.write("Sorting array "+ arr.sort());
+
+    </script>
+
+  </body>
+</html>
+
+Q3 Try out functions of array. [join(), splice(), toString(), sort() etc] Explore more functions
+//-->

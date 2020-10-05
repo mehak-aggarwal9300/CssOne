@@ -1,0 +1,28 @@
+<html>
+
+<body>
+    Roll No: <input type="text" id="t1"><br>
+    Name: <input type="text" id="t2"><br>
+    DOB: <input type="date" id="t3"><br>
+    <input type="button" value="submit" onclick="check()">
+
+    <script>
+        function check() {
+            var r = document.getElementById("t1").value;
+            var n = document.getElementById("t2").value;
+            var d = document.getElementById("t3").value;
+
+            if (r == "" || r.length != 7 || !(r.match("[0-9]")))
+                alert("Enter 7 digit roll no");
+
+            else if (n == "" || !(n.match(/^[a-zA-Z]+$/)))
+                alert("Enter characters from a-z");
+
+            else if (d == "")
+                alert("Enter DOB");
+            else alert("successful!");   
+        }
+    </script>
+</body>
+
+</html>

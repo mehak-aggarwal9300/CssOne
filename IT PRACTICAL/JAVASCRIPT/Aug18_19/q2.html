@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <fieldset>
+    <form name="f1" action="index.html" method="post">
+      <input type="text" id="Fname" value="" placeholder="First Name"> <br>
+      <input type="text" id="Lname" value="" placeholder="Last Name"><br>
+      <input type="text" id="Email" value="" placeholder="Email"><br>
+      <input type="password" id="Password" value="" placeholder="Password"><br>
+      <input type="password" id="Confirm Password" value="" placeholder="Confirm Password"><br> <br>
+      <label>Gender:</label> <br>
+      Male<input type="radio" name="gender" value="Male">
+      Female<input type="radio" name="gender" value="Female">
+      Other<input type="radio" name="gender" value="Other"><br> <br>
+      <label for="city">City</label>
+      <select class="" name="City" id="city">
+        <option value="Delhi">Delhi</option>
+        <option value="Bengaluru">Bengaluru</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="">Melbourne</option>
+        <option value="">Sydney</option>
+      </select> <br>
+      <label for="">Country</label>
+      <select class="" name="Country" id="country">
+        <option value="">India</option>
+        <option value="">Australia</option>
+      </select> <br>
+
+      <input type="text" id="zp" value="" placeholder="Zipcode"> <br>
+      <input type="button" name="" value="Register" onclick="Check()">
+
+    </form>
+    </fieldset>
+  </body>
+
+  <script type="text/javascript">
+    function Check()
+    { alert("123");
+      if(!document.getElementById("Fname").value||!document.getElementById("Lname").value) { alert("Enter Name!"); break; }
+      if(!document.getElementById("Email").value||!document.getElementById("Password").value||!document.getElementById("Confirm Password").value)
+      { alert("Enter email-id and Password!");
+        break;
+      }
+      else {
+              if(document.getElementById("Password").value!=document.getElementById("Confirm Password").value)
+              alert("Passwords should match!");
+              break;
+           }
+      var radios = document.getElementsByName("gender");
+      var formValid = false;  var i = 0;
+      while (!formValid && i < radios.length) {
+        if (radios[i].checked) formValid = true;
+        i++;
+      }if (!formValid) {
+        alert("Select a gender!");
+        break;
+      }
+
+      var select = document.getElementById('city').selectedIndex;
+      if (select==-1) alert("Select a city");
+      var s = document.getElementById('country');
+      if (s==-1) alert("Select a country");
+
+      var z= document.getElementById("zp").value;
+      if(z.length!=6)alert("Zipcode should be of length 6");
+
+    }
+
+  </script>
+
+</html>

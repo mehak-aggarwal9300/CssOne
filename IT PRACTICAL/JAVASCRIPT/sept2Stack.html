@@ -1,0 +1,65 @@
+<html>
+<head>
+	<title>Stack</title>
+
+	<script type="text/javascript">
+
+		function stack() {
+			this._size = 0;
+			this._a = {};
+		}
+
+		stack.prototype.push = function () {
+			var data = prompt("enter element to be pushed","");
+      var size = ++this._size;
+			this._a[size] = data;
+			this.display();
+      alert("added!");
+		};
+
+
+		stack.prototype.pop = function () {
+			var size = this._size,
+				deletedData;
+
+			if (size) {
+				deletedData = this._a[size];
+				delete this._a[size];
+				this._size--;
+				this.display();
+        alert("removed!");
+				return deletedData;
+
+			}
+
+  };
+
+		stack.prototype.display = function () {
+			const list = document.getElementById('res');
+			var html = '';
+			for (var i in this._a) {
+        html = html + this._a[i] + " ";
+			}
+			list.innerHTML = html;
+		};
+
+		var s1 = new stack();
+	</script>
+
+</head>
+
+<body>
+
+	<div class="buttons">
+		<button onclick="s1.push()">Push</button>
+		<button onclick="s1.pop()">Pop</button>
+	</div>
+
+	<div class="stack">
+		<h2>Elements in stack area</h2>
+		<ul id="res">
+		</ul>
+	</div>
+</body>
+
+</html>

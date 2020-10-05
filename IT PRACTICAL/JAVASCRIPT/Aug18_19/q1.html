@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML LOGIN</title>
+  </head>
+  <body style="background-color:#2E8FF6">
+    <form action="index.html" method="post">
+
+      <fieldset style="background-color:white">
+        <center>
+        <b><h3> Sign In </h3></b>
+        </center>
+          <br>
+          <b>Email address</b><br>
+          <input type="text" id="t1" placeholder="Enter Email"><br>
+          <b>Password</b><br>
+          <input type="text" id="t2" placeholder="Enter Password"> <br>
+          <input type="button" name="b1" value="Submit" onclick="check()" >
+      </fieldset>
+
+    </form>
+    <script type="text/javascript">
+      function check()
+      {
+        if(document.getElementById("t1").value&& document.getElementById("t2").value)
+        { var email=document.getElementById("t1").value;
+          var pass=document.getElementById("t2").value;
+          //alert(pass);
+          if(email=="abc@gmail.com"&&pass=="abc123")
+            { alert("Welcome! you are signed in");
+            }
+              else{
+                  alert("Your credentials are wrong!");
+                  }
+        }
+        else {
+          alert("Fill in both the credentials!");
+        }
+      }
+    </script>
+  </body>
+
+</html>

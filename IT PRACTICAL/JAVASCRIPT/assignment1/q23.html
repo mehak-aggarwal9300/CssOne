@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>registeration form</title>
+
+</head>
+<body>
+<form name="fo">
+  <fieldset>
+
+Name <input type="text" name="n" placeholder="name"><br>
+Birth Date  <input type="text" name="birth" placeholder="dd/mm/yyyy"> <br>
+Email id  <input type="email" name="email" placeholder="email"><br>
+Gender
+<input type="radio"  name="gender" id="Male" checked value="Male" >Male <br>
+<input type="radio" name="gender" id="Female" value="Female">Female <br>
+Hobbies
+<input type="checkbox" name="hobby" value="Music"> Music <br>
+<input type="checkbox" name="hobby" value="Sports"> Sports <br>
+<input type="checkbox" name="hobby" value="Books"> Reading Books <br>
+
+<input type="button" name="" value="Send Data" onclick="c()">
+</fieldset>
+</form>
+<script type="text/javascript">
+
+function c(){
+var n = document.fo.n.value;
+var bd= document.fo.birth.value;
+var email = document.fo.email.value;
+var gender= document.fo.gender.value;
+var hobby = document.fo.hobby.checked;
+var ch=/^[a-zA-Z]+$/;
+var m=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+var dateformat=/^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
+alert(n+" "+bd+" "+email+" "+gender+" ");
+if ( n ==""|| email ==""|| gender=="" || bd=="") {
+alert("please fill all the details");
+}
+else if (n.length>12||n.length<5||!(n.match(ch))) { //check character only
+	alert("invalid name");
+}
+else if(!m.test(email)){
+  alert("enter valid email");
+}
+else if(!bd.match(dateformat))
+{
+  alert("enter valid date!");
+}
+else
+	alert("DATA SUBMITTED");
+}
+</script>
+</body>
+</html>

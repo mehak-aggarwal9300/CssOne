@@ -1,0 +1,39 @@
+
+<html>
+  <body>
+    <form name="form1">
+      <fieldset>
+        <legend>Sample Form</legend>
+        Name:<input type="text" name="Name" value=""> <br>
+        <br> Programming Languages <br>
+        <input type="checkbox" name="check" value="C">C <br>
+        <input type="checkbox" name="check" value="C++">C++ <br>
+        <input type="checkbox" name="check" value="Java">Java <br>
+        <input type="checkbox" name="check" value="JavaScript"> JavaScript <br>
+        <input type="checkbox" name="check" value="Prolog"> Prolog <br>
+        <input type="checkbox" name="check" value="Python"> Python <br>
+        <input type="checkbox" name="check" value="R"> R <br>
+        <input type="button" value="Show selection" onclick="selection()">
+        <p>I know the following languages: </p>
+        <input type="text" name="text" value="default">
+
+      </fieldset>
+    </form>
+
+      <script type="text/javascript">
+        function selection()
+        {
+          var sub = document.getElementsByName("check");
+           var s = [];
+
+           for (var i = 0; i < sub.length; i++) {
+               if (sub[i].checked)
+                   s.push(sub[i].value);
+           }
+           document.form1.text.value = s;
+        }
+
+
+      </script>
+  </body>
+</html>

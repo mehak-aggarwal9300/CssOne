@@ -1,0 +1,103 @@
+<html>
+	<body>
+	<script type=" text/javascript">
+
+	var arr1 = [];
+	var arr2 = [];
+	var size1 =parseInt(prompt("enter size of array 1", "size"));
+	var size2 =parseInt(prompt("enter size of array 2", "size"));
+	for(var i=0 ; i<size1 ; i++)
+	{
+	arr1[i]=parseInt(prompt("enter element of array1",(i+1) + "th element"));
+	}
+	for(var i=0 ; i<size2 ; i++)
+	{
+	arr2[i]=parseInt(prompt("enter element of array2",(i+1) + "th element"));
+	}
+
+
+	function mergearray(arr1,arr2,size1,size2)
+	{
+	var a=0;
+	var arr3=[];
+	size3 = size1+size2;
+	for(i=0; i<size1;i++)
+	{
+	arr3[a]=arr1[i];
+	a++;
+	}
+	for( var j=0;j<size2; j++)
+	{
+	arr3[a]=arr2[j];
+	a++;
+	}
+	//insertion sort
+	for (var i = 1; i < size3; i++)
+    {
+        var key = arr3[i];
+        j = i - 1;
+
+
+        while (j >= 0 && arr3[j] > key)
+        {
+            arr3[j + 1] = arr3[j];
+            j = j - 1;
+        }
+        arr3[j + 1] = key;
+    }
+	//bubble sort
+	// for(var i=0;i<size3;i++)
+	// {
+	// for(var j=0;j<size3;j++)
+	// {
+	// if(arr3[j+1]<arr3[j])
+	// {
+	// var temp = arr3[j];
+	// arr3[j]= arr3[j+1];
+	// arr3[j+1]=temp;
+	// }
+	// }
+	// }
+	return(arr3);
+	}
+
+	document.write(mergearray(arr1,arr2,size1,size2));
+	</script>
+	</body>
+	</html>
+
+<!--Q4 Write a javascript function to merge the contents of two arrays in ascending order. The two
+arrays shall be taken as an input from the user. Also, the size of two arrays should be taken as an
+input from the user.
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+    var arr= new Array();
+    var arr2 = new Array();
+    var size1= parseInt(prompt("Enter number of ele in array 1"));
+    var size2= parseInt(prompt("Enter number of ele in array 2"));
+    for(var i=0;i<size1;i++)
+    {
+        arr[i]= parseInt(prompt(`Array1: Enter ${i+1} th element`));
+    }
+    for(var i=0;i<size2;i++)
+    {
+        arr2[i]= parseInt(prompt(`Array2: Enter ${i+1} th element`));
+    }
+    var arr3 = arr2.concat(arr);
+    document.write(arr3);
+  </script>
+
+  </body>
+
+</html>
+
+//-->

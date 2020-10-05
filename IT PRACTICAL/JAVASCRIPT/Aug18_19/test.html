@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+        var a= parseInt(document.form1.t1.value);
+        var b= parseInt(document.form1.t2.value);
+        var c= parseInt(document.form1.t3.value);
+        var d= document.form1.check.value;
+        if(d.checked==true)
+        { if(d=="max")
+            {
+              var max= Math.max(a,Math.max(b,c));
+              alert(max);
+
+            }
+        if(d=="min")
+        {
+          {
+            var max= Math.min(a,Math.min(b,c));
+            alert(max);
+
+          }
+        }
+        if(d=="avg")
+        {
+          avg=(a+b+c)/3;
+          alert(avg);
+        }
+
+      }
+    </script>
+  </body>
+</html>
+
+
+Write a javascript code with 3 text boxes and 3 radio buttons to
+display the functionality of max, min and average based on user selection.
+Take 3 numbers as input from the user and display the result in an alert box. *

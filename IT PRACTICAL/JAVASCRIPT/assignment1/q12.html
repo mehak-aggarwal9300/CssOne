@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <input type="text" id="t1" placeholder="Enter name" value=" ">
+    <input type="button" value="Submit" onclick="show()">
+
+    <script>
+        function show() {
+            var name = document.getElementById("t1").value;
+            var date = new Date();
+            var hr = date.getHours();
+            var min = date.getMinutes();
+            var a = (hr < 12) ? "AM" : "PM";
+            min = (min < 10) ? "0" + min : min;
+
+
+            // var cont = "Hello " + name + ", Time: " + hr + ":" + min + " " + a;
+            // window.open("",'',cont,"width=200, height=100");
+
+            alert("Hello " + name + ", Time: " + hr + ":" + min + " " + a);
+
+
+            var ans = prompt("Do you want to continue?(y/n)");
+
+            if (ans == "y") {
+                location.reload();
+            }
+
+            else {
+                close();
+            }
+
+            // function openWin() {
+            //     myWindow = window.open("", "myWindow", "width=200, height=100");
+            // }
+
+            // function closeWin() {
+            //     myWindow.close();
+            // }
+        }
+    </script>
+
+</body>
+
+</html>

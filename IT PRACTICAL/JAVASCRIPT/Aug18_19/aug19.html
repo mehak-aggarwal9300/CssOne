@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>registeration form</title>
+
+</head>
+<body>
+<form name="fo">
+  <fieldset>
+    <legend>Registration</legend>
+
+<input type="text" name="firstname" placeholder="firstname"><br>
+<input type="text" name="lastname" placeholder="lastname"><br>
+<input type="email" name="email" placeholder="email"><br>
+<input type="password" name="password" placeholder="password"><br>
+<input type="password" name="confirmpassword" placeholder="confirmpassword"><br>
+<h7>gender</h7> <br>
+<input type="radio" name="gender" id="male" value="male">male
+<input type="radio" name="gender" id="male" value="female">female
+<input type="radio" name="gender" id="male" value="other">other <br>
+<h7>country</h7> 
+<select id="country" name="country">
+    <option value="china">china</option>
+    <option value="usa">usa</option>
+    <option value="india">india</option>
+    <option value="nepal">nepal</option>
+  </select>
+  <h7>city</h7><select id="city" name="city">
+    <option value="china">jaipur</option>
+    <option value="usa">mumbai</option>
+    <option value="india">delhi</option>
+    <option value="nepal">bengluru</option>
+  </select>
+<br>
+  <h7>zip code</h7>
+  <input type="text" name="zipcode" placeholder="zipcode"><br><br>
+  <input type="button" name="button" value="register now" onclick="c()">
+</fieldset>
+</form>
+<script type="text/javascript">
+
+function c(){
+var fn = document.fo.firstname.value;
+
+var lastname = document.fo.lastname.value;
+var email = document.fo.email.value;
+var password = document.fo.password.value;
+var confirmpassword= document.fo.confirmpassword.value;
+var gender= document.fo.gender.value;
+var country = document.fo.country.value;
+var city = document.fo.city.value;
+var zipcode = document.fo.zipcode.value;
+
+if (lastname ==" "|| fn ==" "|| email ==" "|| password ==" "|| confirmpassword == " "|| gender==" "|| country ==" " ||city ==" " ||zipcode ==""  ) {
+alert(" please fill all the details");
+
+}
+ else if (password !=confirmpassword) {
+	alert(" your password doesnot match with confirmpassword");
+
+}
+  else if (zipcode.length<6) {
+	alert("invalid zipcode");
+
+}
+else
+	alert("registeration done successfully");
+}
+
+
+
+
+
+
+
+
+</script></body>
+</html>

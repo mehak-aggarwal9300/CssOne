@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+	function makenewwindow(){
+var newwindow = prompt("enter the document to go to in format http://www.url.com","");
+if (!(newwindow ==null|| newwindow =="")) {
+   window.open(newwindow,"", "status,menubar=yes,resizable =no, toolbar=no")
+
+
+}
+
+else
+{
+	var blankwindow = window.open("","","status,menubar=yes,resizable=no,toolbar=no");
+ var windowcontent="<html><body style=background-color=FFFFFF><H1>new window</H1>"
+
+ windowcontent+="<FORM><INPUT type=button Name=close onClick= window.close() value=close></FORM></BODY></HTML>"
+ blankwindow.document.write(windowcontent)
+}
+
+}
+
+</script>
+</head>
+<body>
+<FORM>
+	<input  name="open" onclick="makenewwindow()" type="button" value="open url">
+</FORM>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      function makeWindow()
+      {
+      var windo = prompt("Enter the document to go to in format http://www.url.com","");
+      if(!(windo==null)||windo=="")){
+        window.open(windo,"","status,menubar=yes,resizable=no,toolbar=no")
+      }
+      else{
+        var blankw=window.open("","status,menubar=yes,resizable=no,toolbar=no")
+        var wcontent="<html><body Style='background-color:#FFFFFF'><h1>New window</h1>"
+        wcontent+="<form><input type="button" name="Close" value="close" onClick='window.close()'/>"
+        wcontent+="value="</form></body></html>"
+        blankw.document.write(wcontent);
+      }
+      }
+    </script>
+  </head>
+  <body>
+    <form class="" action="index.html" method="post">
+      <!-- <input type="button" name="open" value="Open URL" onclick="makeWindow()"> -->
+    </form>
+  </body>
+</html>
